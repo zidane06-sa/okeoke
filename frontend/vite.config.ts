@@ -50,7 +50,7 @@ export default defineConfig({
   },
   build: {
     target: 'esnext',
-    outDir: 'dist', // <-- UBAH INI DARI 'build' JADI 'dist'
+    outDir: 'dist', // ← PASTIKAN INI 'dist' BUKAN 'build'
   },
   server: {
     port: 3000,
