@@ -55,8 +55,18 @@
             "typescript": "^5.9.3",
             "vite": "^6.4.1"
       },
-      "scripts": {
-            "dev": "vite",
-            "build": "vite build"
-      }
+{
+  "scripts": {
+    "prebuild": "chmod +x node_modules/.bin/vite",
+    "build": "vite build",
+    "dev": "vite dev",
+    "preview": "vite preview"
+  }
+      {
+  "scripts": {
+    "build": "npx vite build",
+    "dev": "npx vite dev"
+  }
+}
+}
 }
