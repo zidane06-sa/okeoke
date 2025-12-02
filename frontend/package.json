@@ -1,5 +1,5 @@
 {
-  "name": "PAUD Tunas Ceria App",
+  "name": "paud-tunas-ceria-app",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -7,8 +7,7 @@
     "prebuild": "chmod +x node_modules/.bin/vite || true",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.3",
@@ -39,7 +38,7 @@
     "@radix-ui/react-tooltip": "^1.1.8",
     "axios": "^1.13.2",
     "class-variance-authority": "^0.7.1",
-    "clsx": "*",
+    "clsx": "^2.1.0",
     "cmdk": "^1.1.1",
     "embla-carousel-react": "^8.6.0",
     "input-otp": "^1.4.2",
@@ -52,7 +51,7 @@
     "react-resizable-panels": "^2.1.7",
     "recharts": "^2.15.2",
     "sonner": "^2.0.7",
-    "tailwind-merge": "*",
+    "tailwind-merge": "^2.5.4",
     "vaul": "^1.1.2"
   },
   "devDependencies": {
