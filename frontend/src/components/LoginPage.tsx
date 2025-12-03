@@ -30,7 +30,7 @@ export function LoginPage({ onNavigate }: LoginPageProps) {
     setIsLoading(true);
 
     try {
-      const response = await fetch('https://okeoke-kf8w.vercel.app/', {
+      const response = await fetch('https://okeoke-kf8w.vercel.app', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
