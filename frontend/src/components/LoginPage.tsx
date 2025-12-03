@@ -30,7 +30,7 @@ export function LoginPage({ onNavigate }: LoginPageProps) {
     setIsLoading(true);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      const apiUrl = import.meta.env.VITE_API_URL || 'https://okeoke-swart.vercel.app/';
       const response = await fetch(`${apiUrl}/user/login`, {
         method: 'POST',
         headers: {
