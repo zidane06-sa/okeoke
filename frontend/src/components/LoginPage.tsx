@@ -31,6 +31,7 @@ export function LoginPage({ onNavigate }: LoginPageProps) {
 
     try {
       const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      console.log('Using API URL:', apiUrl); // Debug
       const response = await fetch(`${apiUrl}/user/login`, {
         method: 'POST',
         headers: {
