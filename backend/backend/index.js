@@ -5,11 +5,23 @@ const os = require('os');
 
 const app = express();
 
-// Simple CORS
+// CORS Configuration
+const corsOrigins = [
+  'https://okeoke-swart.vercel.app',
+  'http://localhost:3000',
+  'http://localhost:5173'
+];
+
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*');
+  const origin = req.headers.origin;
+  if (corsOrigins.includes(origin) || origin === undefined) {
+    res.header('Access-Control-Allow-Origin', origin || '*');
+  } else {
+    res.header('Access-Control-Allow-Origin', '*');
+  }
   res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
   res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+  res.header('Access-Control-Allow-Credentials', 'true');
 
   if (req.method === 'OPTIONS') return res.sendStatus(200);
   next();
