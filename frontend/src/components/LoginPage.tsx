@@ -70,7 +70,8 @@ export function LoginPage({ onNavigate }: LoginPageProps) {
       }
     } catch (error) {
       console.error('Login error:', error);
-      toast.error('Backend tidak terjangkau. Pastikan server berjalan di http://localhost:3001');
+      const errorMsg = error instanceof Error ? error.message : 'Terjadi kesalahan jaringan';
+      toast.error(`Backend tidak terjangkau: ${errorMsg}`);
     } finally {
       setIsLoading(false);
     }

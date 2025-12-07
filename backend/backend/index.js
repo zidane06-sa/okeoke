@@ -7,6 +7,7 @@ const app = express();
 
 // CORS Configuration
 const corsOrigins = [
+  'https://okeoke-kf8w.vercel.app',
   'https://okeoke-swart.vercel.app',
   'http://localhost:3000',
   'http://localhost:5173'

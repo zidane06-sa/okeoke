@@ -56,7 +56,8 @@ export function ManageLearningPlansPage({ onNavigate }: ManageLearningPlansPageP
     try {
       setLoading(true);
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:3001/rencanaPembelajaran', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      const res = await fetch(`${apiUrl}/rencanaPembelajaran`, {
         headers: {
           'Authorization': `Bearer ${token}`,
         }

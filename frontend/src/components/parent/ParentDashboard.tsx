@@ -41,7 +41,8 @@ export function ParentDashboard({ onNavigate }: ParentDashboardProps) {
       setError(null);
       try {
         const token = localStorage.getItem('token');
-        const url = `http://localhost:3001/children?parentId=${encodeURIComponent(user.id)}`;
+        const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+        const url = `${apiUrl}/children?parentId=${encodeURIComponent(user.id)}`;
         const res = await fetch(url, {
           method: 'GET',
           headers: token ? { 'Authorization': `Bearer ${token}` } : undefined,

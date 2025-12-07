@@ -72,7 +72,8 @@ export function RegisterChildPage({ onNavigate }: RegisterChildPageProps) {
 
       console.log('Sending payload:', JSON.stringify(payload, null, 2));
 
-      const response = await fetch('http://localhost:3001/children', {
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+      const response = await fetch(`${apiUrl}/children`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

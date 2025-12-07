@@ -55,8 +55,8 @@ export function RegisterPage({ onNavigate }: RegisterPageProps) {
     setIsLoading(true);
 
   try {
-    // ✅ GANTI INI KE PORT 3001
-    const response = await fetch('http://localhost:3001/user/register', {
+    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001';
+    const response = await fetch(`${apiUrl}/user/register`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
