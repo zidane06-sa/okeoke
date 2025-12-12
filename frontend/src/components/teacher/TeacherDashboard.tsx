@@ -14,7 +14,7 @@ export function TeacherDashboard({ onNavigate }: TeacherDashboardProps) {
       <div className="max-w-7xl mx-auto">
         <div className="mb-8">
           <h1 className="text-3xl mb-2">Dashboard Guru</h1>
-          <p className="text-gray-600">Selamat datang, {user?.fullName}</p>
+          <p className="text-gray-600">Selamat datang, idan</p>
         </div>
 
         {/* Quick Actions */}

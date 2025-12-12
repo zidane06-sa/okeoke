@@ -56,7 +56,7 @@ export function TeacherComplaintsPage({ onNavigate }: TeacherComplaintsPageProps
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.itemName || !formData.description || !formData.photo) {
+    if (!formData.itemName || !formData.description) {
       toast.error('Mohon isi semua field');
       return;
     }
@@ -112,14 +112,7 @@ export function TeacherComplaintsPage({ onNavigate }: TeacherComplaintsPageProps
                   />
                 </div>
                 <div>
-                  <Label htmlFor="photo">Foto Bukti</Label>
-                  <Input
-                    id="photo"
-                    type="file"
-                    accept="image/*"
-                    onChange={(e) => setFormData({ ...formData, photo: e.target.files?.[0] || null })}
-                    className="mt-1"
-                  />
+
                 </div>
                 <Button type="submit" className="w-full bg-gradient-to-r from-pink-400 to-purple-400">
                   Kirim Keluhan
@@ -168,9 +161,7 @@ export function TeacherComplaintsPage({ onNavigate }: TeacherComplaintsPageProps
                     )}
                   </div>
                   <div className="flex gap-2">
-                    <Button variant="outline" size="sm" onClick={() => window.open(complaint.photoUrl, '_blank')}>
-                      Lihat Foto
-                    </Button>
+
                   </div>
                 </div>
               </Card>
